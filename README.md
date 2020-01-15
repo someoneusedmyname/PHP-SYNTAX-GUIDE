@@ -24,10 +24,19 @@
    
 ## PHP Variables
 
-Variables are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores ( **\_** ), no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
+Variables are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores **\_**, no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
 
 ```
-$your_variable = your value goes here;
+$your_variable = "your value goes here";
 $_your_variable1 = 1000;
+```
+
+## PHP Echo and Print Statements
+
+The **echo** statement will display the value of a variable or html code.
+
+```
+echo $your_variable; //displays the text: your value goes here
+echo  "<h1>Example Header</h1>; //displays the text with the h1 header style: *Example Header*
 ```
    
