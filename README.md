@@ -13,3 +13,14 @@ Single line comments are similar to Javascript, just put "//" or "#" before the 
 
 ?>
 ```
+
+Multi-line comments are the same as CSS and JS, just put "/* before the lines of code or comment, and add "*/" to the end.
+
+```
+/* This is a multi-line comment,
+   which can also be used to prevent
+   a block of code from being run */
+```
+   
+## PHP Variables
+   
