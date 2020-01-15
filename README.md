@@ -3,5 +3,13 @@
 
 ## PHP Single & Multi-line Comments
 
-Single line comments are similar to Javascript, just put "//" before the comment or line of code you don't want to be run.
+Single line comments are similar to Javascript, just put "//" or "#" before the comment or line of code you don't want to be run.
 
+```
+<?php
+
+// This is a sinlge line comment
+# This is also a a sinlge line comment
+
+?>
+```
