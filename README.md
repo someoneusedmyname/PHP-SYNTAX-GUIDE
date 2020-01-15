@@ -37,6 +37,15 @@ The **echo** statement will display the value of a variable or html code.
 
 ```
 echo $your_variable; //displays the text: your value goes here
-echo  "<h1>Example Header</h1>; //displays the text with the h1 header style: *Example Header*
+echo  "<h1>Example Header</h1>"; //displays the text "Example Header" with the h1 header style. 
 ```
+
+The **print** statement will write whatever text you put in quotes or html markup. It is very simialr to the echo statement, but can only print one string.
+
+```
+print "your text goes here"; //displays the text: your text goes here
+print "<h1>Example Header</h1>; //displays the text "Example Header" with the h1 header style. 
+```
+
+## PHP Data Types
    
