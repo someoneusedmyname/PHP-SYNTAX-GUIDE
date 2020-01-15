@@ -14,7 +14,7 @@
 ?>
 ```
 
-**Multi-line comments** are the same as CSS and JS, just put **/*** before the lines of code or comment, and add ***/** to the end.
+**Multi-line comments** are the same as CSS and JS, just put **/*** before the lines of code or comment and add ***/** to the end.
 
 ```
 /* This is a multi-line comment,
@@ -24,5 +24,10 @@
    
 ## PHP Variables
 
-Variables are used to store data, like a number or string of text. They start with **$\_** and contains only numbers and letters, no spaces. Also, the variable cannot start with a number.
+Variables are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores ( **\_** ), no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
+
+```
+$your_variable = your value goes here;
+$_your_variable1 = 1000;
+```
    
