@@ -4,7 +4,7 @@ A couple general notes;
 
 ```
 // 1. PHP code starts with "<?php" and ends with "?>".
-//  2. All lines of code need to end with a semicolon or your webpage will not load and you will see a "HTTP Error 500".
+// 2. All lines of code need to end with a semicolon or your webpage will not load and you will see a "HTTP Error 500".
 ```
 
 ## PHP Single & Multi-line Comments
