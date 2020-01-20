@@ -248,12 +248,12 @@ echo $x;   // returns 10
 **Logical operators** can be used to combine conditional statements.
 
 ```
-and	| And | $x and $y	| True if both $x and $y are true,
-or	   | Or	| $x or $y	| True if either $x or $y is true,
-xor	| Xor	| $x xor $y	| True if either $x or $y is true, but not both,
-&&	   | And	| $x && $y	| True if both $x and $y are true,
-||	   | Or	| $x || $y	| True if either $$x or $y is true,
-!	   | Not	| !$x	      | True if $x is not true,
+and | And | $x and $y | True if both $x and $y are true,
+or  | Or	 | $x or $y  | True if either $x or $y is true,
+xor | Xor | $x xor $y | True if either $x or $y is true, but not both,
+&&	 | And | $x && $y  | True if both $x and $y are true,
+||	 | Or	 | $x || $y  | True if either $$x or $y is true,
+!   | Not | !$x       | True if $x is not true,
 ```
 
 ```
@@ -264,4 +264,30 @@ if(($age > 12) || ($age < 18)){
 } else{
     echo "$year is not a youth.";
 } // prints 15 is a you
+```
+
+### String Operators
+
+The is 2 **string operator**, "." will join the variables together(concantenate), ".=" will append the second value to the first variable, so the first variable is reassigned as a combination of the 2.
+
+```
+$a = "Thank";
+$b = " you";
+echo $a . $b; // prints Thank you
+ 
+$a .= $b;
+echo $a; // prints Thank you
+```
+
+### Array Operators
+
+**Aarray operators** are basically comparison operators for arrays, with the addition of **union**.
+
+```
++	 | Union	       | $x + $y	 | Union of $x and $y,
+==	 | Equality	    | $x == $y	 | True if $x and $y have the same key/value pairs,
+=== | Identity	    | $x === $y | True if $x and $y have the same key/value pairs in the same order and of the same types,
+!=	 | Inequality	 | $x != $y	 | True if $x is not equal to $y,
+<>	 | Inequality	 | $x <> $y	 | True if $x is not equal to $y,
+!== | Non-identity | $x !== $y | True if $x is not identical to $y,
 ```
