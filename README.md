@@ -1,6 +1,4 @@
-# PHP-SYNTAX-GUIDE
-
-##12 PHP Syntax Categories with Examples
+# PHP SYNTAX GUIDE - 12 PHP Syntax Categories with Examples
 
 A general note, all lines of code need to end with a semicolon or your webpage will not load and you will see a "HTTP Error 500".
 
@@ -27,7 +25,7 @@ A general note, all lines of code need to end with a semicolon or your webpage w
    
 ## PHP Variables
 
-Variables are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores **\_**, no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
+**Variables** are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores **\_**, no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
 
 ```
 $your_variable = "your value goes here";
@@ -54,7 +52,7 @@ print "<h1>Example Header</h1>"; //displays the text "Example Header" with the h
 
 ### Integers
 
-There is 5 types of integers that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
+There is 5 types of **integers** that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
 
 ```
 $a = 123; // decimal number
@@ -74,7 +72,7 @@ var_dump($e); // prints int(123)
 
 ### PHP Strings
 
-A string is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
+A **string** is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
 
 ```
 $single = 'Single quotes';
@@ -85,12 +83,11 @@ echo $double;
   
 $escape = 'I\'m not 6\' tall';
 echo $escape;
-  
 ```
   
 ### PHP Floating Point Numbers
   
-Floating point numbers, also refered to as as 'doubles' or 'real numbers', are decimal or fractional numbers.
+**Floating point numbers**, also refered to as as **'doubles'** or **'real numbers'**, are decimal or fractional numbers.
   
 ```
 $a = 20.202;
@@ -102,6 +99,51 @@ var_dump($b);  // prints float(1050000)
 
 $c = 3E-10;
 var_dump($c); // prints float(3.0E-10)
+```
+
+## PHP Booleans
+
+**Booleans** are either on or off, 1/true or 0/false.
+
+```
+$boolean_1 = True;
+var_dump($boolean_1); // prints bool(true)
+
+$boolean_0 = False;
+var_dump($boolean_0); // prints bool(false)
+```
+
+## PHP Arrays
+
+**Arrays** are complex variables, that can hold multiple values and can even have arrays within the array(**multidimensional arrays**). There is also **indexed arrays**, where the values have an numbered index(starting from 0), and there is **associated arrays**, which have a named key, instead of a number.
+
+```
+$employee_email = array(
+    array(
+        "name" => "Fred Smith",
+        "email" => "fsmith@company.com",
+    ),
+    array(
+        "name" => "John Davidson",
+        "email" => "jdavidson@company.com",
+    ),
+    array(
+        "name" => "Andrew Tasker",
+        "email" => "atasker@company.com",
+    )
+);
+// Access nested value
+echo "John Davidson's company email is: " . $employee_email[1]["email"]; // multidimensional array prints John Davidson's company email is: jdavidson@company.com
+
+$employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
+print_r($employees); // indexed array prints  Array ( [0] => Fred Smith [1] => John Davidson [2] => Andrew Tasker )
+
+$employees_position = array(
+    "Fred Smith" => "General Manager",
+    "John Davidson" => "Production Supervisor",
+    "Andrew Tasker" => "Clerk"
+);
+print_r($employees_position); // associated array prints Array ( [Fred Smith] => General Manager [John Davidson] => Production Supervisor [Andrew Tasker] => Clerk )
 ```
   
    
