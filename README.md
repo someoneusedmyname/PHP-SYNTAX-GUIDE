@@ -60,7 +60,7 @@ print "<h1>Example Header</h1>"; //displays the text "Example Header" with the h
 
 ## PHP Data Types
 
-### Integers
+### Integers/Numbers
 
 There is 5 types of **integers** that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
 
@@ -390,6 +390,54 @@ function pageUpdate(){
  pageUpdate(); prints This page was last updated 01/01/2000(this would be the date of when the code is executed/page loaded)
 ```
 
+## PHP Loops
+
+The is 4 different types of loops; **while**, **do..while**, **for** and **foreach**.
+
+### While Loops
+
+If the condition is true, the code will excute in a loop, until that condition is no longer met.
+
+```
+$x = 5;
+while($x <= 10){
+    $x++;
+    echo "Counting " . $x . ",";
+}
+//prints Counting 6,Counting 7,Counting 8,Counting 9,Counting 10,Counting 11,
+```
+
+### Do..While Loops
+
+Similar to the **while loop**, but this loop checks if the condition is true after the code is executed. So, even if the condition is not met, the code will still execute once. The example below shows that the condition has not been met, but the code will still execute once.
+
+```
+$x = 10;
+do{
+    $x++;
+    echo "Counting " . $x . ".";
+}
+while($x <= 5);
+//prints Counting 11,
+```
+
+### For Loops
+
+**For Loops** take a variable and initializes it, code will execute until it reaches the set condition, based on the increment. 
+
+```
+// base
+for(initialization; condition; increment){
+    // Code to be executed
+}
+
+
+// example
+for($x=10; $x<=20; $x++){
+    echo  $x . ", ";
+}
+// prints 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+```
 
 
 
