@@ -188,10 +188,10 @@ echo($a % $b); // the modulus would be 1
 
 ```
 +=	| Add and assign             | $a += $b |	$a = $a + $b,
--=	| Subtract and assign	      | $a -= $b | $a = $a - $b,
-\*= | Multiply and assign	       | $a \*= $b |	$a = $a \* $b,
-/=	 | Divide and assign quotient	 | $a /= $b |	$a = $a / $b,
-%=	| Divide and assign modulus	| $a %= $b |	$a = $a % $b,
+-=	| Subtract and assign	     | $a -= $b | $a = $a - $b,
+*= | Multiply and assign	     | $a *= $b |	$a = $a * $b,
+=	| Divide and assign quotient | $a /= $b |	$a = $a / $b,
+%=	| Divide and assign modulus  | $a %= $b |	$a = $a % $b,
 ```
 
 ```
@@ -204,5 +204,64 @@ echo $a; // prints 20
 
 **Comparison operators** compare two values in a with True or False(boolean).
 
-  
-   
+```
+==  |	Equal	                   | $x == $y  | True if $x is equal to $y,
+=== |	Identical	             | $x === $y |	True if $x is equal to $y, and they are of the same type,
+!=	 | Not equal	             | $x != $y	 | True if $x is not equal to $y,
+<>	 | Not equal	             | $x <> $y	 | True if $x is not equal to $y,
+!== |	Not identical	          | $x !== $y | True if $x is not equal to $y, or they are not of the same type,
+<	 | Less than	             | $x < $y	 | True if $x is less than $y,
+>	 | Greater than	          | $x > $y	 | True if $x is greater than $y,
+>=	 | Greater than or equal to |	$x >= $y	 | True if $x is greater than or equal to $y,
+<=	 | Less than or equal to	 | $x <= $y	 | True if $x is less than or equal to $y,
+```
+
+```
+$a = BIG;
+$b = big;
+var_dump($a === $b); prints bool(false), because one variable is uppercase and the other is lowercase.
+
+$a = BIG;
+$b = big;
+var_dump($a !== $b); prints bool(true), because they are equal, but not identical.
+```
+
+### Incrementing and Decrementing Operators
+
+These operators increment/decrement a variable's value.
+
+```
+++$x	| Pre-increment	| Increments $x by one, then returns $x,
+$x++	| Post-increment	| Returns $x, then increments $x by one,
+--$x	| Pre-decrement	| Decrements $x by one, then returns $x,
+$x--	| Post-decrement	| Returns $x, then decrements $x by one,
+```
+
+```
+$x = 9;
+echo $x++; // returns 9, but the next time the variable echoed the increment will be present.
+echo $x;   // returns 10
+```
+
+### Logical Operators
+
+**Logical operators** can be used to combine conditional statements.
+
+```
+and	| And | $x and $y	| True if both $x and $y are true,
+or	   | Or	| $x or $y	| True if either $x or $y is true,
+xor	| Xor	| $x xor $y	| True if either $x or $y is true, but not both,
+&&	   | And	| $x && $y	| True if both $x and $y are true,
+||	   | Or	| $x || $y	| True if either $$x or $y is true,
+!	   | Not	| !$x	      | True if $x is not true,
+```
+
+```
+$age = 15;
+// a youth for this example is 13-17
+if(($age > 12) || ($age < 18)){
+    echo "$age is a youth.";
+} else{
+    echo "$year is not a youth.";
+} // prints 15 is a you
+```
