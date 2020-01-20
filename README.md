@@ -357,7 +357,7 @@ if($time > 1700){
 } // prints You might want to try coffee.
 ```
 
-### PHP Functions
+## PHP Functions
 
 There is 2 main types of functions;  
 
@@ -394,7 +394,7 @@ function pageUpdate(){
 
 The is 4 different types of loops; **while**, **do..while**, **for** and **foreach**.
 
-### While Loops
+### while Loops
 
 If the condition is true, the code will excute in a loop, until that condition is no longer met.
 
@@ -407,7 +407,7 @@ while($x <= 10){
 //prints Counting 6,Counting 7,Counting 8,Counting 9,Counting 10,Counting 11,
 ```
 
-### Do..While Loops
+### do..while Loops
 
 Similar to the **while loop**, but this loop checks if the condition is true after the code is executed. So, even if the condition is not met, the code will still execute once. The example below shows that the condition has not been met, but the code will still execute once.
 
@@ -421,23 +421,41 @@ while($x <= 5);
 //prints Counting 11,
 ```
 
-### For Loops
+### for Loops
 
-**For Loops** take a variable and initializes it, code will execute until it reaches the set condition, based on the increment. 
+**for Loops** take a variable and initializes it, code will execute until it reaches the set condition, based on the increment. 
 
 ```
 // base
 for(initialization; condition; increment){
     // Code to be executed
 }
-
-
-// example
+```
+```
 for($x=10; $x<=20; $x++){
     echo  $x . ", ";
 }
 // prints 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ```
+
+## foreach Loops
+
+**foreach Loops** will go through the values of an array and excute the code on each of them.
+
+```
+foreach($array as $value){
+    // Code to be executed
+}
+```
+```
+$beers = array("Budweiser", "Corona", "Coors Light", "Kokanee");
+ 
+foreach($beers as $value){
+    echo $value . ", ";
+}
+// loops and prints all items in the array separated by commas: Budweiser, Corona, Coors Light, Kokanee,
+```
+
 
 
 
