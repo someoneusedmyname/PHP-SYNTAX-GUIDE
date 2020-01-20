@@ -284,11 +284,11 @@ echo $a; // prints Thank you
 **Aarray operators** are basically comparison operators for arrays, with the addition of **union**.
 
 ```
-+	 | Union	       | $x + $y	 | Union of $x and $y,
-==	 | Equality	    | $x == $y	 | True if $x and $y have the same key/value pairs,
++ | Union	       | $x + $y	 | Union of $x and $y,
+==	| Equality	    | $x == $y	 | True if $x and $y have the same key/value pairs,
 === | Identity	    | $x === $y | True if $x and $y have the same key/value pairs in the same order and of the same types,
-!=	 | Inequality	 | $x != $y	 | True if $x is not equal to $y,
-<>	 | Inequality	 | $x <> $y	 | True if $x is not equal to $y,
+!=	| Inequality	 | $x != $y	 | True if $x is not equal to $y,
+<>	| Inequality	 | $x <> $y	 | True if $x is not equal to $y,
 !== | Non-identity | $x !== $y | True if $x is not identical to $y,
 ```
 
@@ -298,3 +298,67 @@ $employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
 
 var_dump($trainees == $employees); // prints bool(false)
 ```
+
+###  Spaceship Operator
+
+**Spaceship operator (<=>)** can be used for comparing two expressions. The spaceship operator returns 0 if both are equal, 1 if the left is greater, and -1 if the right is greater.
+
+```
+$x < $y	| ($x <=> $y) === -1,
+$x <= $y	| ($x <=> $y) === -1 || ($x <=> $y) === 0,
+$x == $y	| ($x <=> $y) === 0,
+$x != $y	| ($x <=> $y) !== 0,
+$x >= $y	| ($x <=> $y) === 1 || ($x <=> $y) === 0,
+$x > $y	| ($x <=> $y) === 1,
+```
+
+```
+echo 1 <=> 10; // Outputs: -1
+```
+
+## If & Else & Elseif
+
+### If Statement
+
+If the statement is true, then the code will execute.
+
+```
+$time = 1800;
+if($time > 1700){
+    echo "Time for a beer!";
+} // prints Time for a beer!
+```
+
+### If...else Statement
+
+If the statement is true, then the "if" code will execute. If it's false, the "else" code will execute.
+
+```
+$time = 1600;
+if($time > 1700){
+    echo "Time for a beer!";
+}else{
+    echo "It's too early for a beer.";
+} prints It's too early for a beer.
+```
+
+### If...elseif...else Statement
+
+If the statement is true, then the "if" code will execute. If it's false, but the second statement is true the "elseif" code will execute. And if both the first and second statements are false, the else code will execute.
+
+```
+$time = 1000;
+if($time > 1700){
+    echo "Time for a beer!";
+}elseif($time > 1100){
+    echo "It's too early for a beer.";
+  }else{
+    echo "You might want to try coffee.";
+} // prints You might want to try coffee.
+```
+
+
+
+
+
+
