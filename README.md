@@ -115,8 +115,9 @@ var_dump($boolean_0); // prints bool(false)
 
 ## PHP Arrays
 
-**Arrays** are complex variables, that can hold multiple values and can even have arrays within the array(**multidimensional arrays**). There is also **indexed arrays**, where the values have an numbered index(starting from 0), and there is **associated arrays**, which have a named key, instead of a number.
+### Multidimensional Arrays
 
+**Arrays** are complex variables, that can hold multiple values and can even have arrays within the array(**multidimensional arrays**).  
 ```
 $employee_email = array(
     array(
@@ -132,12 +133,21 @@ $employee_email = array(
         "email" => "atasker@company.com",
     )
 );
-// Access nested value
-echo "John Davidson's company email is: " . $employee_email[1]["email"]; // multidimensional array prints John Davidson's company email is: jdavidson@company.com
+echo "John Davidson's company email is: " . $employee_email[1]["email"]; // a nested value in a multidimensional array prints John Davidson's company email is: jdavidson@company.com
+```
+### Indexed Arrays
 
+**Indexed arrays**, the values have an numbered index starting from 0.
+
+```
 $employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
 print_r($employees); // indexed array prints  Array ( [0] => Fred Smith [1] => John Davidson [2] => Andrew Tasker )
+```
+### Associated Arrays
 
+**Associated arrays** have a named key instead of a number. These can be very useful to store data about a particualr value.
+
+```
 $employees_position = array(
     "Fred Smith" => "General Manager",
     "John Davidson" => "Production Supervisor",
