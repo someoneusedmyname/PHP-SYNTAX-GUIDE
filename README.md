@@ -291,3 +291,10 @@ echo $a; // prints Thank you
 <>	 | Inequality	 | $x <> $y	 | True if $x is not equal to $y,
 !== | Non-identity | $x !== $y | True if $x is not identical to $y,
 ```
+
+```
+$trainees = array("Al Cohall", "Jack Johnson", "Jill McInnis");
+$employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
+
+var_dump($trainees == $employees); // prints bool(false)
+```
