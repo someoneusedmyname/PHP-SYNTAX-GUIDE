@@ -7,7 +7,7 @@ A couple general notes;
 // 2. All lines of code need to end with a semicolon or your webpage will not load and you will see a "HTTP Error 500".
 ```
 
-## PHP Single & Multi-line Comments
+## 1. PHP Single & Multi-line Comments
 
 **Single line comments** are similar to Javascript, just put **//** or **#** before the comment or line of code you don't want to be run.
 
@@ -28,7 +28,7 @@ A couple general notes;
    a block of code from being run */
 ```
    
-## PHP Variables
+## 2. PHP Variables
 
 **Variables** are used to store data, like a number or string of text. They start with **$** and contains only numbers, letters and underscores **\_**, no spaces. Also, the variable cannot start with a number. Variables can be declared without a value assigned, as it can be defined later, or redefined. List the variable first, then use the **=** assignment operator, followed by the value and finished off with a semicolon. Laslty, variables are case sensitive, so **$example** is different from **$Example**.
 
@@ -37,17 +37,7 @@ $your_variable = "your value goes here";
 $_your_variable1 = 1000;
 ```
 
-## PHP Constants
-
-**Constants** are similar to variables, but as the names differ, the functions also differ. Constants will not be accidently changed once they're defined.
-
-```
-define("company_email", "contact_us@company.com"); // this defines the constant
- 
-echo 'Please send comments and suggestions to: ' . company_email; // prints Please send comments and suggestions to: contact_us@company.com
-```
-
-## PHP Echo and Print Statements
+## 3. PHP Echo and Print Statements
 
 The **echo** statement will display the value of a variable or html code.
 
@@ -63,42 +53,7 @@ print "your text goes here"; //displays the text: your text goes here
 print "<h1>Example Header</h1>"; //displays the text "Example Header" with the h1 header style. 
 ```
 
-## PHP Data Types
-
-### Integers/Numbers
-
-There is 5 types of **integers** that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
-
-```
-$a = 123; // decimal number
-var_dump($a); // prints int(123)
- 
-$b = -123; // a negative number
-var_dump($b); // prints int(-123)
- 
-$c = 0x7B; // hexadecimal number
-var_dump($c); // prints int(123)
- 
-$d = 0173; // octal number
-var_dump($d); // prints int(123)
-$e = 0b1111011; // binary number
-var_dump($e); // prints int(123)
-```
-
-### PHP Strings
-
-A **string** is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
-
-```
-$single = 'Single Quotes';
-echo $single; // prints Single Quotes
-  
-$double = "Double Quotes";
-echo $double; // prints Double Quotes
-  
-$escape = 'I\'m not 6\' tall';
-echo $escape; // prints I'm not 6' tall 
-```
+## 4. PHP Data Types
   
 ### PHP Floating Point Numbers
   
@@ -128,49 +83,52 @@ $boolean_0 = False;
 var_dump($boolean_0); // prints bool(false)
 ```
 
-## PHP Arrays
+### 5. PHP Strings
 
-### Multidimensional Arrays
-
-**Arrays** are complex variables, that can hold multiple values and can even have arrays within the array(**multidimensional arrays**).  
-```
-$employee_email = array(
-    array(
-        "name" => "Fred Smith",
-        "email" => "fsmith@company.com",
-    ),
-    array(
-        "name" => "John Davidson",
-        "email" => "jdavidson@company.com",
-    ),
-    array(
-        "name" => "Andrew Tasker",
-        "email" => "atasker@company.com",
-    )
-);
-echo "John Davidson's company email is: " . $employee_email[1]["email"]; // a nested value in a multidimensional array prints John Davidson's company email is: jdavidson@company.com
-```
-### Indexed Arrays
-
-**Indexed arrays**, the values have an numbered index starting from 0.
+A **string** is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
 
 ```
-$employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
-print_r($employees); // indexed array prints  Array ( [0] => Fred Smith [1] => John Davidson [2] => Andrew Tasker )
+$single = 'Single Quotes';
+echo $single; // prints Single Quotes
+  
+$double = "Double Quotes";
+echo $double; // prints Double Quotes
+  
+$escape = 'I\'m not 6\' tall';
+echo $escape; // prints I'm not 6' tall 
 ```
-### Associated Arrays
 
-**Associated arrays** have a named key instead of a number. These can be very useful to store data about a particualr value.
+## 6. Numbers/Integers
+
+There is 5 types of **integers** that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
 
 ```
-$employees_position = array(
-    "Fred Smith" => "General Manager",
-    "John Davidson" => "Production Supervisor",
-    "Andrew Tasker" => "Clerk"
-);
-print_r($employees_position); // associated array prints Array ( [Fred Smith] => General Manager [John Davidson] => Production Supervisor [Andrew Tasker] => Clerk )
+$a = 123; // decimal number
+var_dump($a); // prints int(123)
+ 
+$b = -123; // a negative number
+var_dump($b); // prints int(-123)
+ 
+$c = 0x7B; // hexadecimal number
+var_dump($c); // prints int(123)
+ 
+$d = 0173; // octal number
+var_dump($d); // prints int(123)
+$e = 0b1111011; // binary number
+var_dump($e); // prints int(123)
 ```
-## PHP Operators
+
+## 7. PHP Constants
+
+**Constants** are similar to variables, but as the names differ, the functions also differ. Constants will not be accidently changed once they're defined.
+
+```
+define("company_email", "contact_us@company.com"); // this defines the constant
+ 
+echo 'Please send comments and suggestions to: ' . company_email; // prints Please send comments and suggestions to: contact_us@company.com
+```
+
+## 8. PHP Operators
 
 **Operators** are special characters that can be singular or combined to do arithmetic, comparisons and other similar functions.
 
@@ -321,7 +279,8 @@ $x > $y	| ($x <=> $y) === 1,
 echo 1 <=> 10; // Outputs: -1
 ```
 
-## If & Else & Elseif
+
+## 9. If & Else & Elseif
 
 ### If Statement
 
@@ -362,7 +321,7 @@ if($time > 1700){
 } // prints You might want to try coffee.
 ```
 
-## PHP Functions
+## 10. PHP Functions
 
 There is 2 main types of functions;  
 
@@ -395,7 +354,53 @@ function pageUpdate(){
  pageUpdate(); prints This page was last updated 01/01/2000(this would be the date of when the code is executed/page loaded)
 ```
 
-## PHP Loops
+## 11. PHP Arrays
+
+### Multidimensional Arrays
+
+**Arrays** are complex variables, that can hold multiple values and can even have arrays within the array(**multidimensional arrays**).  
+```
+$employee_email = array(
+    array(
+        "name" => "Fred Smith",
+        "email" => "fsmith@company.com",
+    ),
+    array(
+        "name" => "John Davidson",
+        "email" => "jdavidson@company.com",
+    ),
+    array(
+        "name" => "Andrew Tasker",
+        "email" => "atasker@company.com",
+    )
+);
+echo "John Davidson's company email is: " . $employee_email[1]["email"]; // a nested value in a multidimensional array prints John Davidson's company email is: jdavidson@company.com
+```
+### Indexed Arrays
+
+**Indexed arrays**, the values have an numbered index starting from 0.
+
+```
+$employees = array("Fred Smith", "John Davidson", "Andrew Tasker");
+print_r($employees); // indexed array prints  Array ( [0] => Fred Smith [1] => John Davidson [2] => Andrew Tasker )
+```
+### Associated Arrays
+
+**Associated arrays** have a named key instead of a number. These can be very useful to store data about a particualr value.
+
+```
+$employees_position = array(
+    "Fred Smith" => "General Manager",
+    "John Davidson" => "Production Supervisor",
+    "Andrew Tasker" => "Clerk"
+);
+print_r($employees_position); // associated array prints Array ( [Fred Smith] => General Manager [John Davidson] => Production Supervisor [Andrew Tasker] => Clerk )
+```
+
+
+
+
+## 12. PHP Loops
 
 The is 4 different types of loops; **while**, **do..while**, **for** and **foreach**.
 
