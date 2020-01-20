@@ -32,6 +32,16 @@ $your_variable = "your value goes here";
 $_your_variable1 = 1000;
 ```
 
+## PHP Constants
+
+**Constants** are similar to variables, but as the names differ, the functions also differ. Constants will not be accidently changed once they're defined.
+
+```
+define("company_email", "contact_us@company.com"); // this defines the constant
+ 
+echo 'Please send comments and suggestions to: ' . company_email; // prints Please send comments and suggestions to: contact_us@company.com
+```
+
 ## PHP Echo and Print Statements
 
 The **echo** statement will display the value of a variable or html code.
@@ -155,5 +165,31 @@ $employees_position = array(
 );
 print_r($employees_position); // associated array prints Array ( [Fred Smith] => General Manager [John Davidson] => Production Supervisor [Andrew Tasker] => Clerk )
 ```
+## PHP Operators
+
+**Operators** are special characters that can be singular or combined to do arithmetic, comparisons and other similar functions.
+
+### Arithmetic Operators
+
+These operators are pretty common in other scripting languages:
+
+"+" addition, "-" subtraction, "\*" multiplication, "/" division and "%" modulus.
+
+```
+// modulus example (remainder from a division equation)
+$a = 7;
+$b = 3;
+echo($a % $b); // the modulus would be 1
+```
+
+### Assignment Operators
+
+**Assignment Operators** can shorten a equation to assign a value to a variable, or simply just assign a value with **"="**.
+
++=	| Add and assign             | $a += $b |	$a = $a + $b
+-=	| Subtract and assign	      | $a -= $b | $a = $a - $b
+\*= | Multiply and assign	       | $a \*= $b |	$a = $a \* $b
+/=	 | Divide and assign quotient	 | $a /= $b |	$a = $a / $b
+%=	| Divide and assign modulus	| $a %= $b |	$a = $a % $b
   
    
