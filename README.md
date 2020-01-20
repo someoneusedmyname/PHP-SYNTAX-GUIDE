@@ -85,14 +85,14 @@ var_dump($e); // prints int(123)
 A **string** is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
 
 ```
-$single = 'Single quotes';
-echo $single;
+$single = 'Single Quotes';
+echo $single; // prints Single Quotes
   
 $double = "Double Quotes";
-echo $double;
+echo $double; // prints Double Quotes
   
 $escape = 'I\'m not 6\' tall';
-echo $escape;
+echo $escape; // prints I'm not 6' tall 
 ```
   
 ### PHP Floating Point Numbers
@@ -186,10 +186,23 @@ echo($a % $b); // the modulus would be 1
 
 **Assignment Operators** can shorten a equation to assign a value to a variable, or simply just assign a value with **"="**.
 
-+=	| Add and assign             | $a += $b |	$a = $a + $b
--=	| Subtract and assign	      | $a -= $b | $a = $a - $b
-\*= | Multiply and assign	       | $a \*= $b |	$a = $a \* $b
-/=	 | Divide and assign quotient	 | $a /= $b |	$a = $a / $b
-%=	| Divide and assign modulus	| $a %= $b |	$a = $a % $b
+```
++=	| Add and assign             | $a += $b |	$a = $a + $b,
+-=	| Subtract and assign	      | $a -= $b | $a = $a - $b,
+\*= | Multiply and assign	       | $a \*= $b |	$a = $a \* $b,
+/=	 | Divide and assign quotient	 | $a /= $b |	$a = $a / $b,
+%=	| Divide and assign modulus	| $a %= $b |	$a = $a % $b,
+```
+
+```
+$a = 7;
+$a += 13;
+echo $a; // prints 20
+```
+
+### Comparison Operators
+
+**Comparison operators** compare two values in a with True or False(boolean).
+
   
    
