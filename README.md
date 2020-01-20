@@ -44,8 +44,34 @@ The **print** statement will write whatever text you put in quotes or html marku
 
 ```
 print "your text goes here"; //displays the text: your text goes here
-print "<h1>Example Header</h1>; //displays the text "Example Header" with the h1 header style. 
+print "<h1>Example Header</h1>"; //displays the text "Example Header" with the h1 header style. 
 ```
 
 ## PHP Data Types
+
+### Integers
+
+There is 5 types of integers that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
+
+```
+$a = 123; // decimal number, prints 123
+var_dump($a);
+echo "<br>";
+ 
+$b = -123; // a negative number, prints -123 
+var_dump($b);
+echo "<br>";
+ 
+$c = 0x7B; // hexadecimal number, prints 123
+var_dump($c);
+echo "<br>";
+ 
+$d = 0173; // octal number, prints 123
+var_dump($d);
+echo "<br>";
+  
+$e = 0b1111011; // binary number, prints 123
+var_dump($e);
+
+```
    
