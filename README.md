@@ -1,5 +1,8 @@
 # PHP-SYNTAX-GUIDE
-12 PHP Syntax Categories with Examples
+
+##12 PHP Syntax Categories with Examples
+
+A general note, all lines of code need to end with a semicolon or your webpage will not load and you will see a "HTTP Error 500".
 
 ## PHP Single & Multi-line Comments
 
@@ -54,24 +57,51 @@ print "<h1>Example Header</h1>"; //displays the text "Example Header" with the h
 There is 5 types of integers that PHP can process; decimal, negative, hexagonal, octal and binary numbers.
 
 ```
-$a = 123; // decimal number, prints 123
-var_dump($a);
-echo "<br>";
+$a = 123; // decimal number
+var_dump($a); // prints int(123)
  
-$b = -123; // a negative number, prints -123 
-var_dump($b);
-echo "<br>";
+$b = -123; // a negative number
+var_dump($b); // prints int(-123)
  
-$c = 0x7B; // hexadecimal number, prints 123
-var_dump($c);
-echo "<br>";
+$c = 0x7B; // hexadecimal number
+var_dump($c); // prints int(123)
  
-$d = 0173; // octal number, prints 123
-var_dump($d);
-echo "<br>";
-  
-$e = 0b1111011; // binary number, prints 123
-var_dump($e);
+$d = 0173; // octal number
+var_dump($d); // prints int(123)
+$e = 0b1111011; // binary number
+var_dump($e); // prints int(123)
+```
+
+### PHP Strings
+
+A string is a group of characters, including spaces. A string can contain up to 2147483647 characters(or 2GB). They start and end with matching single quotes or double quotes. You can use a backslash \ (escape character) in front of an of a single or double quote to display it as a character rather than ending the string.
 
 ```
+$single = 'Single quotes';
+echo $single;
+  
+$double = "Double Quotes";
+echo $double;
+  
+$escape = 'I\'m not 6\' tall';
+echo $escape;
+  
+```
+  
+### PHP Floating Point Numbers
+  
+Floating point numbers, also refered to as as 'doubles' or 'real numbers', are decimal or fractional numbers.
+  
+```
+$a = 20.202;
+var_dump($a); // prints float(20.202)
+
+ 
+$b = 10.5e5;
+var_dump($b);  // prints float(1050000)
+
+$c = 3E-10;
+var_dump($c); // prints float(3.0E-10)
+```
+  
    
