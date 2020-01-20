@@ -357,6 +357,39 @@ if($time > 1700){
 } // prints You might want to try coffee.
 ```
 
+### PHP Functions
+
+There is 2 main types of functions;  
+
+### Built-in Functions
+
+There is a large list of predefined functions, here is a link https://www.php.net/manual/en/indexes.functions.php
+
+```
+$today = date("d/m/Y");
+echo "Today is " . $today; // prints Today is 01/01/2000(this would be the date of when the code is executed/page loaded)
+```
+
+### User-defined Functions
+
+Just as the title states, these functions are custom made and can be reused, modified or what have you. 
+This is the base shell you'd start with:
+
+```
+function functionName(){
+    // Code to be executed
+}
+```
+
+```
+// Defining function
+function pageUpdate(){
+    echo "This page was last updated " . date("d/m/Y");
+}
+// Calling function
+ pageUpdate(); prints This page was last updated 01/01/2000(this would be the date of when the code is executed/page loaded)
+```
+
 
 
 
